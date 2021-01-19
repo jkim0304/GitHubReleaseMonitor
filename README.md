@@ -1,13 +1,15 @@
 # GitHub Release Monitor
 
-A tool to keep track of releases made by GitHub repos.
+A simple tool to keep track of GitHub repos' releases.
 
 ## Setup
 
 In the project directory, you can run:
 
-### `npm install`
-### `npm start`
+```
+npm install
+npm start
+```
 
 
 ## Examples

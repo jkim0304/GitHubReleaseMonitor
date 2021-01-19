@@ -6,8 +6,10 @@ A simple tool to keep track of GitHub repos' releases.
 
 In the project directory, you can run:
 
-### `npm install`
-### `npm start`
+```
+npm install
+npm start
+```
 
 
 ## Examples

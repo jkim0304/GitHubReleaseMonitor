@@ -40,7 +40,8 @@ function AddRepo ({ onRepoAdd }) {
                     owner,
                     repo,
                     version: '', //response.data[0].tag_name
-                    new: false
+                    new: false,
+                    body: response.data[0].body
                 });
                 handleToggle();
                 setOwner('');

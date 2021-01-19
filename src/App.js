@@ -40,10 +40,16 @@ function App () {
                     owner: repos[i].owner,
                     repo: repos[i].repo
                 });
+                console.log(response);
                 let version = response.data[0].tag_name
                 if (repos[i].version !== version) {
                     let reposCopy = [...repos];
-                    reposCopy[i] = { ...repos[i], version, new: true }
+                    reposCopy[i] = { 
+                        ...repos[i], 
+                        version, 
+                        new: true, 
+                        body: response.data[0].body
+                    };
                     setRepos(reposCopy);
                 }
             } catch (err) {

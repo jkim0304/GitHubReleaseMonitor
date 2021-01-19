@@ -3,6 +3,7 @@ import Container from '@material-ui/core/Container';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
+import ListItemIcon from '@material-ui/core/ListItemIcon'
 import { ListItemSecondaryAction } from '@material-ui/core';
 import IconButton from '@material-ui/core/IconButton';
 import DeleteIcon from '@material-ui/icons/Delete';
@@ -38,7 +39,7 @@ function Repos({ repos, onRepoDelete, onRepoSeen }) {
                         <a 
                             href={`http://github.com/${detailItem.owner}/${detailItem.repo}/releases`}
                             target="_blank" 
-                            rel="noreferrer"
+                            rel="noopener noreferrer"
                         >
                             Releases Page
                         </a>
@@ -55,11 +56,9 @@ function Repos({ repos, onRepoDelete, onRepoSeen }) {
                                 secondary = {item.version}
                             />
 
-                            <listItemIcon style={{visibility: item.new ? 'visible' : 'hidden'}} >
+                            <ListItemIcon style={{visibility: item.new ? 'visible' : 'hidden'}} >
                                 <NewReleasesIcon />
-                            </listItemIcon>
-
-                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            </ListItemIcon>
 
                             <ListItemSecondaryAction>
                                 <IconButton onClick={() => onRepoDelete(item)}>

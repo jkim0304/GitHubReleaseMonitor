@@ -34,32 +34,31 @@ function App () {
     const octokit = new Octokit();
 
     const handleRepoRefresh = async () => {
+        let reposCopy = [...repos];
         for (let i = 0; i < repos.length; i++) {
             try {
                 let response = await octokit.request('GET /repos/{owner}/{repo}/releases', {
                     owner: repos[i].owner,
                     repo: repos[i].repo
                 });
-                console.log(response);
                 let version = response.data[0].tag_name
                 if (repos[i].version !== version) {
-                    let reposCopy = [...repos];
                     reposCopy[i] = { 
-                        ...repos[i], 
+                        ...reposCopy[i], 
                         version, 
                         new: true, 
                         body: response.data[0].body
                     };
-                    setRepos(reposCopy);
                 }
             } catch (err) {
                 console.log(err)
             }
         }
+        setRepos(reposCopy);
     };
 
     const handleRepoSeen = repo => {
-        let reposCopy = [... repos];
+        let reposCopy = [...repos];
         let repoIndex = repos.findIndex(item => item === repo);
         reposCopy[repoIndex] = { ...repos[repoIndex], new: false } 
         setRepos(reposCopy);

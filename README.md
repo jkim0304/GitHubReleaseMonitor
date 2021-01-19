@@ -1,6 +1,6 @@
 # GitHub Release Monitor
 
-A simple tool to keep track of releases made by GitHub repos.
+A simple tool to keep track of GitHub repos' releases.
 
 ## Setup
 

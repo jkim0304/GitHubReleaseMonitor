@@ -1,5 +1,5 @@
 import React, { Fragment, useState, useEffect } from 'react';
-import { CssBaseline, withStyles } from '@material-ui/core';
+import { CssBaseline } from '@material-ui/core';
 import AppHeader from './Components/AppHeader';
 import Repos from './Components/Repos'
 import './App.css';

@@ -32,14 +32,14 @@ function AddRepo ({ onRepoAdd }) {
     
     const handleSubmit = () => {
         octokit.request('GET /repos/{owner}/{repo}/releases', {
-            owner: 'microsoft',
-            repo: 'vscode'
+            owner,
+            repo
         }).then(
             (response) => {
                 onRepoAdd({
                     owner,
                     repo,
-                    version: '',
+                    version: '', //response.data[0].tag_name
                     new: false
                 });
                 handleToggle();

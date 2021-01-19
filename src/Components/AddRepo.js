@@ -70,7 +70,7 @@ function AddRepo ({ onRepoAdd }) {
                     />
                     <TextField
                         margin="dense"
-                        label="Repo"
+                        label="Name"
                         value={repo}
                         onChange={handleRepoChange}
                         fullWidth

@@ -16,14 +16,14 @@ function App () {
         localStorage.setItem('repos', JSON.stringify(repos))
     }, [repos]);
 
-    const handleRepoAdd = repo => {
+    const handleRepoAdd = (repo) => {
         setRepos([
             ...repos,
             repo
         ]);
     };
     
-    const handleRepoDelete = repo => {
+    const handleRepoDelete = (repo) => {
         setRepos(
             repos.filter(item => 
                 item !== repo
@@ -57,7 +57,7 @@ function App () {
         setRepos(reposCopy);
     };
 
-    const handleRepoSeen = repo => {
+    const handleRepoSeen = (repo) => {
         let reposCopy = [...repos];
         let repoIndex = repos.findIndex(item => item === repo);
         reposCopy[repoIndex] = { ...repos[repoIndex], new: false } 

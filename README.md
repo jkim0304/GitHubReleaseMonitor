@@ -14,6 +14,6 @@ npm start
 
 ## Examples
 
-![Alt text](Example1.png)
-![Alt text](Example2.png)
-![Alt text](Example3.png)
+![Alt text](resources/Example1.png)
+![Alt text](resources/Example2.png)
+![Alt text](resources/Example3.png)

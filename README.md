@@ -2,17 +2,7 @@
 
 A simple tool to keep track of GitHub repos' releases.
 
-## Setup
-
-In the project directory, you can run:
-
-```
-npm install
-npm start
-```
-
-
-## Examples
+Hosted at: https://jkim0304-gh-release-monitor.herokuapp.com/
 
 ![Alt text](resources/Example1.png)
 ![Alt text](resources/Example2.png)
